@@ -16,7 +16,7 @@ let cards = [{
 	cardImage: "images/king-of-diamonds.png"
 }];
 let cardsInPlay = [];
-let userScore = -1;
+let userScore = 0;
 
 function checkForMatch() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -49,8 +49,6 @@ function createBoard() {
 	}
 	var resetButton = document.getElementById('reset-btn');
 	resetButton.addEventListener('click', resetGame);
-
-	updateScore();
 }
 
 function resetGame() {
@@ -65,7 +63,7 @@ function resetGame() {
 function updateScore() {
 	userScore++;
 	var scoreBoard = document.getElementById('user-score');
-	scoreBoard.innerHTML= userScore;
+	scoreBoard.innerHTML = userScore;
 }
 
 createBoard();
